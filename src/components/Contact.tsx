@@ -79,10 +79,12 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-black mb-1">Headquarters</h4>
-                  <p className="text-muted-foreground">
-                    Nairobi Business District<br />
-                    Kenya
-                  </p>
+                  
+                  <h4 className="font-semibold text-black mb-1">Our Head Office</h4>
+                  <p className="text-gray">Nairobi, Kenya</p>
+                  <p className="text-gray">Industrial Area</p>
+                  <p className="text-gray">Lunga Lunga Plaza</p>
+                  <p className="text-gray">Off Lunga Lunga Road</p>
                 </div>
               </div>
 
@@ -203,12 +205,18 @@ const Contact = () => {
             {/* Map */}
             <div className="mt-8 relative z-10">
               <h4 className="text-lg font-bold mb-4 text-black">Find Us</h4>
-              <div className="bg-white/60 rounded-lg h-48 flex items-center justify-center shadow-md border border-yellow-200/20">
-                <div className="text-center text-black/70">
-                  <MapPin className="w-12 h-12 mx-auto mb-2 text-yellow-500" />
-                  <p>Interactive Map Coming Soon</p>
-                  <p className="text-sm">Nairobi Business District, Kenya</p>
-                </div>
+              <div className="bg-white/60 rounded-lg h-64 flex items-center justify-center shadow-md border border-yellow-200/20 overflow-hidden">
+                <iframe
+                  title="Tomic Security Head Office Map"
+                  src="https://www.google.com/maps?q=Lunga+Lunga+Plaza,+Nairobi,+Kenya&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="rounded-lg"
+                ></iframe>
               </div>
             </div>
           </div>

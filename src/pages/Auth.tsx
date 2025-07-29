@@ -66,7 +66,7 @@ export default function Auth() {
     } else {
       toast({
         title: "Account created!",
-        description: "Welcome to Tomic Security. You can now access your client dashboard."
+        description: "Welcome to Tomic Security, your trusted security solution provider. You can now access your client dashboard."
       });
       navigate('/dashboard');
     }
@@ -80,11 +80,11 @@ export default function Auth() {
         <CardHeader className="text-center">
           <div className="flex items-center justify-center mb-4">
             <Shield className="h-8 w-8 text-primary mr-2" />
-            <h1 className="text-2xl font-bold">Tomic Security</h1>
+            <h1 className="text-2xl font-bold">Tomic Security - Security Solution Provider</h1>
           </div>
           <CardTitle>Welcome</CardTitle>
           <CardDescription>
-            Access your security services account
+            Access your security solutions account
           </CardDescription>
         </CardHeader>
         <CardContent>

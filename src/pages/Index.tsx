@@ -12,7 +12,6 @@ import Testimonials from '@/components/Testimonials';
 import Blog from '@/components/Blog';
 import About from '@/components/About';
 import CompanyTimeline from '@/components/CompanyTimeline';
-import Career from '@/components/Career';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -35,7 +34,7 @@ const Index = () => {
         <CompanyTimeline />
         <Testimonials />
         <Blog />
-        <Career />
+      
         <Contact />
       </main>
       <Footer />

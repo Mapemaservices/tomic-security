@@ -27,8 +27,8 @@ const Hero = () => {
 
   const entranceCards = [
     {
-      title: 'Welcome to Tomic Secure',
-      description: 'Your safety is our priority. Explore premium security solutions.',
+      title: 'Welcome to Tomic Security Service Limited.',
+      description: 'We are a strong trusted Security brand driven by dedicated Security Passionate teams, Keen to make a difference in the security sector. Explore our site to interact with our products offering.',
       color: 'bg-gradient-to-br from-orange/80 via-gold/80 to-gray/80',
       icon: <span className="text-4xl">🔒</span>
     },
@@ -76,8 +76,9 @@ const Hero = () => {
             onClick={() => setShowEntranceCards(false)}
           >
             <div className="mb-4">{entranceCards[activeCard].icon}</div>
-            <h3 className="text-2xl font-bold mb-2 drop-shadow-lg">{entranceCards[activeCard].title}</h3>
-            <p className="text-lg mb-2 drop-shadow">{entranceCards[activeCard].description}</p>
+            <h3 className="text-2xl font-bold mb-2 drop-shadow-lg">Welcome to Tomic Security Services Limited.</h3>
+            <p className="text-lg mb-2 drop-shadow">We are a strong trusted Security brand driven by dedicated Security Passionate teams, Keen to make a difference in the security sector. Explore our site to interact with our products offering.</p>
+            <p className="text-base text-yellow-300 font-semibold mt-2">Response time: 1 minute to &lt; 10 minutes</p>
             <span className="text-sm opacity-70">Click card to continue</span>
           </motion.div>
         </div>

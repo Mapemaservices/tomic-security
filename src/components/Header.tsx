@@ -52,7 +52,7 @@ const Header = () => {
       {/* Marquee headline */}
       <motion.div initial={{ x: '-100%' }} animate={{ x: 0 }} transition={{ duration: 2, ease: 'easeOut' }} className="w-full overflow-hidden bg-black/30 py-1">
         <div className="marquee-move text-white font-bold text-lg tracking-wide whitespace-nowrap animate-marquee-move">
-          Welcome to Tomic Security — Experience the Future of Protection & Service! Welcome to Tomic Security — Experience the Future of Protection & Service!
+          Welcome to Tomic Security service ltd...where Security meets passion...
         </div>
         <style>{`
           @keyframes marquee-move {

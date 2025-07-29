@@ -55,7 +55,7 @@ export default function Dashboard() {
       <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center space-x-4">
-            <h1 className="text-xl font-bold">Tomic Security</h1>
+            <h1 className="text-xl font-bold">Tomic Security - Security Solution Provider</h1>
             <div className="text-sm text-muted-foreground">
               {profile.role.charAt(0).toUpperCase() + profile.role.slice(1)} Portal
             </div>

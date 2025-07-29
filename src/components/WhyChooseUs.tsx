@@ -94,7 +94,7 @@ const WhyChooseUs = () => {
                 ×
               </button>
               <div className="mb-6">
-                <span className="drop-shadow-lg">Welcome to Tomic Security!<br/>We are Kenya's most trusted security agency, offering modern solutions, expert staff, and advanced technology to keep you safe. Explore our site to discover premium services and real client success stories.</span>
+                <span className="drop-shadow-lg">Welcome to Tomic Security!<br/>We are Kenya's most trusted security solution provider, offering modern solutions, expert staff, and advanced technology to keep you safe. Explore our site to discover premium services and real client success stories.</span>
               </div>
               <div className="flex justify-center gap-4 mt-4">
                 <span className="bg-white/20 px-4 py-2 rounded-xl text-yellow font-semibold shadow">Super Modern</span>
@@ -107,7 +107,7 @@ const WhyChooseUs = () => {
       <div className="container-custom">
         <div ref={sectionRef} className="text-center mb-12">
           <motion.h2 initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: [0.4,0,0.2,1] }} className="text-3xl md:text-5xl font-bold mb-4 text-gold drop-shadow-lg">
-            The Most Successful Security Agency
+            The Most Successful Security Solution Provider
           </motion.h2>
           <motion.p initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.2, ease: [0.4,0,0.2,1] }} className="text-base text-gray max-w-3xl mx-auto leading-relaxed">
             We combine affordability with expertise, leveraging cutting-edge technology and building 

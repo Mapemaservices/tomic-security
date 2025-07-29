@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Shield, Target, Eye, Award } from 'lucide-react';
 
 const About = () => {
+  const [showApplicationForm, setShowApplicationForm] = useState(false);
+  const [applicationRole, setApplicationRole] = useState<'guard' | 'marketer'>('guard');
   return (
     <section id="about" className="section-padding bg-gradient-to-br from-yellow-100/60 via-white/80 to-black/80">
       <div className="container-custom">
@@ -12,8 +14,8 @@ const About = () => {
               Welcome to Tomic Security
             </h2>
             <p className="text-xl text-black mb-8 leading-relaxed bg-white/70 rounded-xl px-4 py-2 shadow-lg backdrop-blur-md">
-              We provide expert guarding & protection solutions customized to your specific needs. 
-              With years of experience and cutting-edge technology, we ensure your safety is never compromised.
+              Tomic Security is a Security Solution Provider—not a security agency. We deliver expert guarding & protection solutions tailored to your specific needs.
+              With years of experience and cutting-edge technology, we ensure your safety is never compromised. Our focus is on providing innovative, reliable, and comprehensive security services, not traditional agency operations.
             </p>
 
             <div className="space-y-6 mb-8">
@@ -23,7 +25,7 @@ const About = () => {
                 </div>
                 <div>
                   <h3 className="font-extrabold text-yellow-700 mb-2">Comprehensive Protection</h3>
-                  <p className="text-black/80">From residential homes to large industrial facilities, we offer complete security solutions.</p>
+                  <p className="text-black/80">From residential homes to large industrial facilities, we offer complete security solutions as a trusted provider, not an agency.</p>
                 </div>
               </div>
 
@@ -47,6 +49,95 @@ const About = () => {
                 Learn More About Us
               </button>
             </a>
+          </div>
+
+          {/* Call for TOMIC Security Section */}
+          <div className="mt-8 mb-8 bg-gradient-to-r from-yellow-200 via-red-100 to-white rounded-2xl shadow-xl p-6 border-2 border-yellow-200/40 flex flex-col items-center">
+            <h2 className="text-2xl font-bold text-red-600 mb-2">Call for TOMIC Security</h2>
+            <p className="text-lg text-black mb-2">For immediate assistance or inquiries, call us:</p>
+            <div className="flex flex-col sm:flex-row gap-4 items-center">
+              <a href="tel:0724630001" className="text-xl font-bold text-yellow-700 bg-white rounded-lg px-4 py-2 shadow hover:bg-yellow-100 transition-colors">0724 630 001</a>
+              <a href="tel:0739630001" className="text-xl font-bold text-yellow-700 bg-white rounded-lg px-4 py-2 shadow hover:bg-yellow-100 transition-colors">0739 630 001</a>
+            </div>
+          </div>
+          <div className="mt-12 bg-white/80 rounded-2xl shadow-xl p-8 border-2 border-yellow-200/40">
+            <h2 className="text-2xl font-bold text-red-600 mb-4">Current Openings</h2>
+            <p className="text-lg text-black mb-4">We are hiring! Apply for the following positions:</p>
+            <ul className="list-disc pl-6 mb-6 text-black">
+              <li className="mb-2 font-semibold">Security Guards and Guardettes</li>
+              <ul className="list-disc pl-6 mb-4 text-black/80">
+                <li>Age: Over 25 years</li>
+                <li>Form Four certificate</li>
+                <li>Police clearance</li>
+                <li>Previous security experience (added advantage)</li>
+                <li>Background check mandatory</li>
+                <li>Statutory documents a must</li>
+              </ul>
+              <li className="mb-2 font-semibold">Marketer</li>
+              <ul className="list-disc pl-6 mb-4 text-black/80">
+                <li>Diploma in sales and Marketing</li>
+                <li>Previous experience in a security firm</li>
+                <li>Among other requirements</li>
+              </ul>
+            </ul>
+            <div className="flex flex-col sm:flex-row gap-4 mt-4">
+              <button
+                className="bg-gradient-to-r from-red-500 via-yellow-400 to-black text-white font-bold py-3 px-6 rounded-lg shadow-xl hover:from-yellow-500 hover:to-red-600 hover:text-black transition-colors border-2 border-yellow-200/40 animate-pulse-glow"
+                onClick={() => { setApplicationRole('guard'); setShowApplicationForm(true); }}
+              >
+                Apply as Security Guard/Guardette
+              </button>
+              <button
+                className="bg-gradient-to-r from-yellow-400 via-red-500 to-black text-white font-bold py-3 px-6 rounded-lg shadow-xl hover:from-red-600 hover:to-yellow-500 hover:text-black transition-colors border-2 border-red-200/40 animate-pulse-glow"
+                onClick={() => { setApplicationRole('marketer'); setShowApplicationForm(true); }}
+              >
+                Apply as Marketer
+              </button>
+            </div>
+            {showApplicationForm && (
+              <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-lg px-2">
+                <div className="bg-gradient-to-br from-yellow-50 via-white to-red-50 rounded-3xl shadow-2xl p-2 sm:p-6 w-full max-w-md relative flex flex-col border-2 border-yellow-200/40">
+                  <button
+                    className="absolute top-4 right-4 text-black bg-gradient-to-br from-red-200 via-yellow-200 to-white rounded-full w-8 h-8 flex items-center justify-center font-bold shadow-lg hover:bg-red-400 transition-colors"
+                    onClick={() => setShowApplicationForm(false)}
+                    aria-label="Close application form"
+                  >
+                    ×
+                  </button>
+                  <h3 className="text-2xl sm:text-3xl font-extrabold mb-6 text-yellow-700 text-center drop-shadow-lg">
+                    {applicationRole === 'guard' ? 'Apply for Security Guard/Guardette' : 'Apply for Marketer'}
+                  </h3>
+                  <form className="grid grid-cols-1 gap-4 w-full">
+                    <input type="text" placeholder="Full Name" className="p-3 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all duration-200" required />
+                    <input type="email" placeholder="Email Address" className="p-3 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all duration-200" required />
+                    <input type="tel" placeholder="Phone Number" className="p-3 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all duration-200" required />
+                    {applicationRole === 'guard' ? (
+                      <>
+                        <input type="number" placeholder="Age" className="p-3 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all duration-200" required min="25" />
+                        <label className="block text-sm font-semibold text-black mt-2">Form Four Certificate (upload)</label>
+                        <input type="file" accept=".pdf,.jpg,.jpeg,.png" className="p-2 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow" required />
+                        <label className="block text-sm font-semibold text-black mt-2">Police Clearance (upload)</label>
+                        <input type="file" accept=".pdf,.jpg,.jpeg,.png" className="p-2 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow" required />
+                        <input type="text" placeholder="Previous Security Experience (if any)" className="p-3 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow" />
+                        <label className="block text-sm font-semibold text-black mt-2">Statutory Documents (upload)</label>
+                        <input type="file" accept=".pdf,.jpg,.jpeg,.png" className="p-2 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow" required />
+                      </>
+                    ) : (
+                      <>
+                        <label className="block text-sm font-semibold text-black mt-2">Diploma in Sales and Marketing (upload)</label>
+                        <input type="file" accept=".pdf,.jpg,.jpeg,.png" className="p-2 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow" required />
+                        <label className="block text-sm font-semibold text-black mt-2">Previous experience in a security firm (upload)</label>
+                        <input type="file" accept=".pdf,.jpg,.jpeg,.png" className="p-2 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow" required />
+                        <label className="block text-sm font-semibold text-black mt-2">Other requirements (upload)</label>
+                        <input type="file" accept=".pdf,.jpg,.jpeg,.png" className="p-2 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow" />
+                      </>
+                    )}
+                    <textarea placeholder="Additional Information" className="p-3 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all duration-200" rows={3}></textarea>
+                    <button type="submit" className="bg-gradient-to-r from-red-600 via-yellow-400 to-black text-white font-bold py-3 px-4 rounded-xl shadow-lg hover:from-yellow-500 hover:to-red-600 hover:text-black transition-colors mt-2">Submit Application</button>
+                  </form>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Mission & Vision */}
