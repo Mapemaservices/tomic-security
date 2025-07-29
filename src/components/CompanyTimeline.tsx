@@ -100,7 +100,7 @@ const CompanyTimeline = () => {
                   <div className={`w-5/12 ${isEven ? 'text-right pr-10' : 'text-left pl-10'}`}>
                     <motion.div
                       whileHover={{ scale: 1.04, boxShadow: '0 12px 48px rgba(255,140,0,0.18)' }}
-                      className="card-elegant bg-white/70 backdrop-blur-2xl rounded-3xl shadow-2xl border border-gold/40 py-8 px-7 text-left relative"
+                      className="card-elegant bg-white/80 backdrop-blur-2xl rounded-3xl shadow-2xl border-2 border-yellow-200/40 py-10 px-8 text-left relative overflow-hidden"
                     >
                       <div className={`flex items-center space-x-3 mb-4 ${isEven ? 'justify-end' : 'justify-start'}`}>
                         <div className={`bg-orange/10 text-orange p-3 rounded-xl group-hover:bg-orange group-hover:text-white transition-all ${!isEven ? 'order-first' : 'order-last'}`}> 
@@ -147,7 +147,7 @@ const CompanyTimeline = () => {
                       whileInView={{ scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.4, delay: index * 0.2 + 0.3 }}
-                      className="w-8 h-8 bg-gradient-to-br from-orange via-gold to-red border-4 border-white rounded-full shadow-2xl"
+                      className="w-8 h-8 bg-gradient-to-br from-yellow-300 via-red-200 to-black border-4 border-white rounded-full shadow-2xl animate-pulse-glow"
                     ></motion.div>
                   </div>
                   {/* Spacer */}
@@ -179,7 +179,7 @@ const CompanyTimeline = () => {
                 <div className="absolute left-0 top-6 w-8 h-8 bg-gradient-to-br from-orange via-gold to-red border-4 border-white rounded-full shadow-2xl"></div>
                 <motion.div
                   whileHover={{ scale: 1.04, boxShadow: '0 12px 48px rgba(255,140,0,0.18)' }}
-                  className="card-elegant bg-white/70 backdrop-blur-2xl rounded-3xl shadow-2xl border border-gold/40 py-8 px-7 text-left relative"
+                  className="card-elegant bg-white/80 backdrop-blur-2xl rounded-3xl shadow-2xl border-2 border-yellow-200/40 py-10 px-8 text-left relative overflow-hidden"
                 >
                   <div className="flex items-center space-x-3 mb-4">
                     <div className="bg-orange/10 text-orange p-3 rounded-xl group-hover:bg-orange group-hover:text-white transition-all">
@@ -243,7 +243,7 @@ const CompanyTimeline = () => {
               <motion.button
                 whileHover={{ scale: 1.07, boxShadow: '0 0 16px #FFD700' }}
                 whileTap={{ scale: 0.97 }}
-                className="btn-primary bg-gradient-to-r from-orange via-gold to-red text-black font-bold py-3 px-8 rounded-xl shadow-lg text-lg"
+                className="btn-primary bg-gradient-to-r from-red-500 via-yellow-400 to-black text-white font-bold py-3 px-8 rounded-xl shadow-lg text-lg animate-pulse-glow hover:from-yellow-500 hover:to-red-600 hover:text-black"
               >
                 Join Our Story
               </motion.button>
@@ -251,6 +251,15 @@ const CompanyTimeline = () => {
           </div>
         </motion.div>
       </div>
+      <style>{`
+        @keyframes pulse-glow {
+          0%, 100% { box-shadow: 0 0 0 0 rgba(255,0,0,0.18), 0 0 0 0 rgba(255,221,51,0.18); }
+          50% { box-shadow: 0 0 24px 8px rgba(255,0,0,0.18), 0 0 24px 8px rgba(255,221,51,0.18); }
+        }
+        .animate-pulse-glow {
+          animation: pulse-glow 2.5s infinite;
+        }
+      `}</style>
     </section>
   );
 };
