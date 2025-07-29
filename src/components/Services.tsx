@@ -37,7 +37,39 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="section-padding bg-gradient-to-br from-white via-yellow-100 to-black/80">
+    <section id="services" className="section-padding relative overflow-hidden">
+      {/* Parallax background */}
+      <div
+        className="absolute inset-0 w-full h-full z-0 pointer-events-none"
+        style={{
+          background: 'linear-gradient(135deg, #fef3c7 0%, #fff 60%, #fee2e2 100%)',
+        }}
+      >
+        <div
+          className="absolute top-0 left-1/2 transform -translate-x-1/2"
+          style={{
+            width: '120vw',
+            height: '60vh',
+            background: 'radial-gradient(circle at 50% 30%, #fde68a 0%, #fca5a5 60%, transparent 100%)',
+            opacity: 0.25,
+            filter: 'blur(32px)',
+            willChange: 'transform',
+            zIndex: 1,
+          }}
+        ></div>
+        <div
+          className="absolute bottom-0 right-0"
+          style={{
+            width: '60vw',
+            height: '40vh',
+            background: 'radial-gradient(circle at 80% 80%, #fca5a5 0%, #fde68a 60%, transparent 100%)',
+            opacity: 0.18,
+            filter: 'blur(24px)',
+            willChange: 'transform',
+            zIndex: 1,
+          }}
+        ></div>
+      </div>
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-yellow-400 to-black drop-shadow-2xl animate-pulse-glow">Our Services</h2>

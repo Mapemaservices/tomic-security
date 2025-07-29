@@ -163,7 +163,7 @@ export const AdminDashboard = () => {
                     <div className="text-sm text-muted-foreground">Clients</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-green-600">{roleStats.staff}</div>
+                    <div className="text-2xl font-bold text-yellow-600">{roleStats.staff}</div>
                     <div className="text-sm text-muted-foreground">Staff</div>
                   </div>
                   <div className="text-center">

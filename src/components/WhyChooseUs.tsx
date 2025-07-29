@@ -66,7 +66,39 @@ const WhyChooseUs = () => {
   };
 
   return (
-    <section id="why-choose-us" className="section-padding bg-gradient-to-br from-yellow/10 via-red/10 to-black/10">
+    <section id="why-choose-us" className="section-padding relative overflow-hidden">
+      {/* Parallax background */}
+      <div
+        className="absolute inset-0 w-full h-full z-0 pointer-events-none"
+        style={{
+          background: 'linear-gradient(135deg, #fef3c7 0%, #fff 60%, #fee2e2 100%)',
+        }}
+      >
+        <div
+          className="absolute top-0 left-1/2 transform -translate-x-1/2"
+          style={{
+            width: '120vw',
+            height: '60vh',
+            background: 'radial-gradient(circle at 50% 30%, #fde68a 0%, #fca5a5 60%, transparent 100%)',
+            opacity: 0.25,
+            filter: 'blur(32px)',
+            willChange: 'transform',
+            zIndex: 1,
+          }}
+        ></div>
+        <div
+          className="absolute bottom-0 right-0"
+          style={{
+            width: '60vw',
+            height: '40vh',
+            background: 'radial-gradient(circle at 80% 80%, #fca5a5 0%, #fde68a 60%, transparent 100%)',
+            opacity: 0.18,
+            filter: 'blur(24px)',
+            willChange: 'transform',
+            zIndex: 1,
+          }}
+        ></div>
+      </div>
       {/* Pop-up card after 3 seconds */}
       <AnimatePresence>
         {showPopup && (
@@ -121,12 +153,12 @@ const WhyChooseUs = () => {
         {/* Modern ping-pong marquee for stats */}
         <div className="overflow-hidden mb-12 w-full">
             <div className="flex gap-8 animate-marquee-pingpong w-max">
-              {/* Green floating icon */}
-              <div className="text-center card-main group bg-white/40 backdrop-blur-lg border border-green-400/40 rounded-2xl p-8 shadow-lg min-w-[220px]">
-                <div className="bg-gradient-to-br from-green-300 via-green-500 to-green-700 text-white p-2 rounded-full w-14 h-14 flex items-center justify-center mx-auto mb-4 shadow-xl group-hover:scale-110 group-hover:shadow-green-400/60 transition-all duration-300 animate-pulse-glow">
+              {/* Yellow floating icon (was green) */}
+              <div className="text-center card-main group bg-white/40 backdrop-blur-lg border border-yellow-400/40 rounded-2xl p-8 shadow-lg min-w-[220px]">
+                <div className="bg-gradient-to-br from-yellow-300 via-yellow-500 to-yellow-700 text-white p-2 rounded-full w-14 h-14 flex items-center justify-center mx-auto mb-4 shadow-xl group-hover:scale-110 group-hover:shadow-yellow-400/60 transition-all duration-300 animate-pulse-glow">
                   <CheckCircle className="w-8 h-8 drop-shadow-lg" />
                 </div>
-                <div className="text-3xl font-bold text-green-600 mb-2 drop-shadow-lg">2,800+</div>
+                <div className="text-3xl font-bold text-yellow-600 mb-2 drop-shadow-lg">2,800+</div>
                 <div className="text-black font-medium">Projects Done</div>
               </div>
               {/* Blue floating icon */}

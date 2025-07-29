@@ -5,7 +5,39 @@ const About = () => {
   const [showApplicationForm, setShowApplicationForm] = useState(false);
   const [applicationRole, setApplicationRole] = useState<'guard' | 'marketer'>('guard');
   return (
-    <section id="about" className="section-padding bg-gradient-to-br from-yellow-100/60 via-white/80 to-black/80">
+    <section id="about" className="section-padding relative overflow-hidden">
+      {/* Parallax background */}
+      <div
+        className="absolute inset-0 w-full h-full z-0 pointer-events-none"
+        style={{
+          background: 'linear-gradient(135deg, #fef3c7 0%, #fff 60%, #fee2e2 100%)',
+        }}
+      >
+        <div
+          className="absolute top-0 left-1/2 transform -translate-x-1/2"
+          style={{
+            width: '120vw',
+            height: '60vh',
+            background: 'radial-gradient(circle at 50% 30%, #fde68a 0%, #fca5a5 60%, transparent 100%)',
+            opacity: 0.25,
+            filter: 'blur(32px)',
+            willChange: 'transform',
+            zIndex: 1,
+          }}
+        ></div>
+        <div
+          className="absolute bottom-0 right-0"
+          style={{
+            width: '60vw',
+            height: '40vh',
+            background: 'radial-gradient(circle at 80% 80%, #fca5a5 0%, #fde68a 60%, transparent 100%)',
+            opacity: 0.18,
+            filter: 'blur(24px)',
+            willChange: 'transform',
+            zIndex: 1,
+          }}
+        ></div>
+      </div>
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
@@ -96,7 +128,17 @@ const About = () => {
             </div>
             {showApplicationForm && (
               <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-lg px-2">
-                <div className="bg-gradient-to-br from-yellow-50 via-white to-red-50 rounded-3xl shadow-2xl p-2 sm:p-6 w-full max-w-md relative flex flex-col border-2 border-yellow-200/40">
+                <div
+                  className="bg-gradient-to-br from-yellow-50 via-white to-red-50 rounded-3xl shadow-2xl border-2 border-yellow-200/40 relative flex flex-col"
+                  style={{
+                    width: '100%',
+                    maxWidth: '480px',
+                    minWidth: '320px',
+                    maxHeight: '90vh',
+                    minHeight: '400px',
+                    overflow: 'hidden',
+                  }}
+                >
                   <button
                     className="absolute top-4 right-4 text-black bg-gradient-to-br from-red-200 via-yellow-200 to-white rounded-full w-8 h-8 flex items-center justify-center font-bold shadow-lg hover:bg-red-400 transition-colors"
                     onClick={() => setShowApplicationForm(false)}
@@ -104,37 +146,46 @@ const About = () => {
                   >
                     ×
                   </button>
-                  <h3 className="text-2xl sm:text-3xl font-extrabold mb-6 text-yellow-700 text-center drop-shadow-lg">
-                    {applicationRole === 'guard' ? 'Apply for Security Guard/Guardette' : 'Apply for Marketer'}
-                  </h3>
-                  <form className="grid grid-cols-1 gap-4 w-full">
-                    <input type="text" placeholder="Full Name" className="p-3 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all duration-200" required />
-                    <input type="email" placeholder="Email Address" className="p-3 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all duration-200" required />
-                    <input type="tel" placeholder="Phone Number" className="p-3 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all duration-200" required />
-                    {applicationRole === 'guard' ? (
-                      <>
-                        <input type="number" placeholder="Age" className="p-3 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all duration-200" required min="25" />
-                        <label className="block text-sm font-semibold text-black mt-2">Form Four Certificate (upload)</label>
-                        <input type="file" accept=".pdf,.jpg,.jpeg,.png" className="p-2 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow" required />
-                        <label className="block text-sm font-semibold text-black mt-2">Police Clearance (upload)</label>
-                        <input type="file" accept=".pdf,.jpg,.jpeg,.png" className="p-2 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow" required />
-                        <input type="text" placeholder="Previous Security Experience (if any)" className="p-3 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow" />
-                        <label className="block text-sm font-semibold text-black mt-2">Statutory Documents (upload)</label>
-                        <input type="file" accept=".pdf,.jpg,.jpeg,.png" className="p-2 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow" required />
-                      </>
-                    ) : (
-                      <>
-                        <label className="block text-sm font-semibold text-black mt-2">Diploma in Sales and Marketing (upload)</label>
-                        <input type="file" accept=".pdf,.jpg,.jpeg,.png" className="p-2 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow" required />
-                        <label className="block text-sm font-semibold text-black mt-2">Previous experience in a security firm (upload)</label>
-                        <input type="file" accept=".pdf,.jpg,.jpeg,.png" className="p-2 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow" required />
-                        <label className="block text-sm font-semibold text-black mt-2">Other requirements (upload)</label>
-                        <input type="file" accept=".pdf,.jpg,.jpeg,.png" className="p-2 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow" />
-                      </>
-                    )}
-                    <textarea placeholder="Additional Information" className="p-3 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all duration-200" rows={3}></textarea>
-                    <button type="submit" className="bg-gradient-to-r from-red-600 via-yellow-400 to-black text-white font-bold py-3 px-4 rounded-xl shadow-lg hover:from-yellow-500 hover:to-red-600 hover:text-black transition-colors mt-2">Submit Application</button>
-                  </form>
+                  <div
+                    className="flex-1 overflow-y-auto px-4 sm:px-6 py-6"
+                    style={{
+                      scrollbarWidth: 'thin',
+                      scrollbarColor: '#facc15 #fff',
+                      maxHeight: 'calc(90vh - 48px)',
+                    }}
+                  >
+                    <h3 className="text-2xl sm:text-3xl font-extrabold mb-6 text-yellow-700 text-center drop-shadow-lg">
+                      {applicationRole === 'guard' ? 'Apply for Security Guard/Guardette' : 'Apply for Marketer'}
+                    </h3>
+                    <form className="grid grid-cols-1 gap-4 w-full">
+                      <input type="text" placeholder="Full Name" className="p-3 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all duration-200" required />
+                      <input type="email" placeholder="Email Address" className="p-3 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all duration-200" required />
+                      <input type="tel" placeholder="Phone Number" className="p-3 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all duration-200" required />
+                      {applicationRole === 'guard' ? (
+                        <>
+                          <input type="number" placeholder="Age" className="p-3 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all duration-200" required min="25" />
+                          <label className="block text-sm font-semibold text-black mt-2">Form Four Certificate (upload)</label>
+                          <input type="file" accept=".pdf,.jpg,.jpeg,.png" className="p-2 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow" required />
+                          <label className="block text-sm font-semibold text-black mt-2">Police Clearance (upload)</label>
+                          <input type="file" accept=".pdf,.jpg,.jpeg,.png" className="p-2 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow" required />
+                          <input type="text" placeholder="Previous Security Experience (if any)" className="p-3 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow" />
+                          <label className="block text-sm font-semibold text-black mt-2">Statutory Documents (upload)</label>
+                          <input type="file" accept=".pdf,.jpg,.jpeg,.png" className="p-2 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow" required />
+                        </>
+                      ) : (
+                        <>
+                          <label className="block text-sm font-semibold text-black mt-2">Diploma in Sales and Marketing (upload)</label>
+                          <input type="file" accept=".pdf,.jpg,.jpeg,.png" className="p-2 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow" required />
+                          <label className="block text-sm font-semibold text-black mt-2">Previous experience in a security firm (upload)</label>
+                          <input type="file" accept=".pdf,.jpg,.jpeg,.png" className="p-2 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow" required />
+                          <label className="block text-sm font-semibold text-black mt-2">Other requirements (upload)</label>
+                          <input type="file" accept=".pdf,.jpg,.jpeg,.png" className="p-2 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow" />
+                        </>
+                      )}
+                      <textarea placeholder="Additional Information" className="p-3 border-2 border-yellow-200/40 rounded-xl bg-white/80 shadow focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all duration-200" rows={3}></textarea>
+                      <button type="submit" className="bg-gradient-to-r from-red-600 via-yellow-400 to-black text-white font-bold py-3 px-4 rounded-xl shadow-lg hover:from-yellow-500 hover:to-red-600 hover:text-black transition-colors mt-2">Submit Application</button>
+                    </form>
+                  </div>
                 </div>
               </div>
             )}

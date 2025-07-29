@@ -72,50 +72,19 @@ const ServiceAreaMap = () => {
                 <MapPin className="w-5 h-5 mr-2" />
                 Kenya Service Map
               </h3>
-              {/* Simplified Kenya Map */}
-              <div className="relative w-full h-80 bg-gradient-to-br from-orange-light/30 to-gold-light/60 rounded-lg overflow-hidden">
-                {/* Kenya outline - simplified shape */}
-                <svg 
-                  viewBox="0 0 100 100" 
-                  className="absolute inset-0 w-full h-full"
-                  style={{ filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.1))' }}
-                >
-                  <path
-                    d="M20 10 L80 10 L85 20 L90 40 L85 60 L80 80 L70 90 L30 95 L15 85 L10 60 L15 40 L20 20 Z"
-                    fill="hsl(var(--primary) / 0.1)"
-                    stroke="hsl(var(--primary))"
-                    strokeWidth="0.5"
-                  />
-                </svg>
-                {/* Service Area Markers */}
-                {serviceAreas.map((area, index) => (
-                  <motion.div
-                    key={area.name}
-                    initial={{ scale: 0, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ delay: index * 0.1, type: "spring", stiffness: 300 }}
-                    style={{
-                      position: 'absolute',
-                      left: `${area.coordinates.x}%`,
-                      top: `${area.coordinates.y}%`,
-                      transform: 'translate(-50%, -50%)'
-                    }}
-                    className="group cursor-pointer"
-                  >
-                    <motion.div
-                      whileHover={{ scale: 1.2 }}
-                      className={`w-4 h-4 rounded-full shadow-lg ${
-                        area.available 
-                          ? 'bg-orange shadow-orange/50' 
-                          : 'bg-red shadow-red/50'
-                      }`}
-                    >
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        {area.name}
-                      </div>
-                    </motion.div>
-                  </motion.div>
-                ))}
+              {/* Real Google Map for Lunga Lunga Plaza */}
+              <div className="w-full h-80 rounded-lg overflow-hidden border border-orange/30 shadow-lg">
+                <iframe
+                  title="Lunga Lunga Plaza Map"
+                  src="https://www.google.com/maps?q=Lunga+Lunga+Plaza,+Nairobi,+Kenya&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="rounded-lg"
+                ></iframe>
               </div>
               {/* Legend */}
               <div className="flex items-center justify-center space-x-6 mt-4">

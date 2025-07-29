@@ -57,7 +57,39 @@ const Testimonials = () => {
 
 
   return (
-    <section id="testimonials" className="section-padding relative overflow-hidden bg-gradient-to-br from-orange via-gold/30 to-white">
+    <section id="testimonials" className="section-padding relative overflow-hidden">
+      {/* Parallax background */}
+      <div
+        className="absolute inset-0 w-full h-full z-0 pointer-events-none"
+        style={{
+          background: 'linear-gradient(135deg, #fef3c7 0%, #fff 60%, #fee2e2 100%)',
+        }}
+      >
+        <div
+          className="absolute top-0 left-1/2 transform -translate-x-1/2"
+          style={{
+            width: '120vw',
+            height: '60vh',
+            background: 'radial-gradient(circle at 50% 30%, #fde68a 0%, #fca5a5 60%, transparent 100%)',
+            opacity: 0.25,
+            filter: 'blur(32px)',
+            willChange: 'transform',
+            zIndex: 1,
+          }}
+        ></div>
+        <div
+          className="absolute bottom-0 right-0"
+          style={{
+            width: '60vw',
+            height: '40vh',
+            background: 'radial-gradient(circle at 80% 80%, #fca5a5 0%, #fde68a 60%, transparent 100%)',
+            opacity: 0.18,
+            filter: 'blur(24px)',
+            willChange: 'transform',
+            zIndex: 1,
+          }}
+        ></div>
+      </div>
       {/* Animated glassmorphism background */}
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 0.18 }} className="absolute inset-0 pointer-events-none">
         <motion.div initial={{ scale: 0.7 }} animate={{ scale: 1 }} transition={{ duration: 2, ease: 'easeOut' }} className="absolute top-16 left-16 w-40 h-40 border-4 border-gold/40 rounded-full shadow-2xl blur-xl"></motion.div>

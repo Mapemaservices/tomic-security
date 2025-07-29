@@ -196,7 +196,7 @@ export const StaffDashboard = () => {
                 <div className="p-4 border rounded-lg">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                      <CheckCircle className="h-5 w-5 text-yellow-500 mr-2" />
                       <div>
                         <h4 className="font-medium">First Aid Certification</h4>
                         <p className="text-sm text-muted-foreground">Valid until: Dec 2024</p>

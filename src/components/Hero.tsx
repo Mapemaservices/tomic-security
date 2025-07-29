@@ -53,7 +53,39 @@ const Hero = () => {
   ];
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-orange/10 via-gold/10 to-gray/10 pt-32 md:pt-40">
+    <section id="hero" className="section-padding relative overflow-hidden min-h-screen flex items-center justify-center pt-32 md:pt-40">
+      {/* Parallax background */}
+      <div
+        className="absolute inset-0 w-full h-full z-0 pointer-events-none"
+        style={{
+          background: 'linear-gradient(135deg, #fef3c7 0%, #fff 60%, #fee2e2 100%)',
+        }}
+      >
+        <div
+          className="absolute top-0 left-1/2 transform -translate-x-1/2"
+          style={{
+            width: '120vw',
+            height: '60vh',
+            background: 'radial-gradient(circle at 50% 30%, #fde68a 0%, #fca5a5 60%, transparent 100%)',
+            opacity: 0.25,
+            filter: 'blur(32px)',
+            willChange: 'transform',
+            zIndex: 1,
+          }}
+        ></div>
+        <div
+          className="absolute bottom-0 right-0"
+          style={{
+            width: '60vw',
+            height: '40vh',
+            background: 'radial-gradient(circle at 80% 80%, #fca5a5 0%, #fde68a 60%, transparent 100%)',
+            opacity: 0.18,
+            filter: 'blur(24px)',
+            willChange: 'transform',
+            zIndex: 1,
+          }}
+        ></div>
+      </div>
       {/* Entrance Cards Modal */}
       {showEntranceCards && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-lg">

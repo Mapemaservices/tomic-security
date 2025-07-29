@@ -1,0 +1,22 @@
+/* Dark Mode Styles */
+.dark-mode {
+  background: #111 !important;
+  color: #fff !important;
+}
+.dark-mode a, .dark-mode button, .dark-mode input, .dark-mode select, .dark-mode textarea {
+  background: #222 !important;
+  color: #ffe066 !important;
+  border-color: #ffe066 !important;
+}
+.dark-mode .bg-white, .dark-mode .bg-yellow-100, .dark-mode .bg-gradient-to-br {
+  background: #222 !important;
+}
+.dark-mode .text-black, .dark-mode .text-yellow-700, .dark-mode .text-red-600, .dark-mode .text-yellow, .dark-mode .text-gold {
+  color: #ffe066 !important;
+}
+.dark-mode .border-yellow-200, .dark-mode .border-yellow-300, .dark-mode .border-yellow-400 {
+  border-color: #ffe066 !important;
+}
+.dark-mode .shadow-lg, .dark-mode .shadow-xl {
+  box-shadow: 0 0 0 2px #ffe066 !important;
+}

@@ -1,0 +1,22 @@
+/* High Contrast Mode Styles */
+.high-contrast {
+  background: #000 !important;
+  color: #fff !important;
+}
+.high-contrast a, .high-contrast button, .high-contrast input, .high-contrast select, .high-contrast textarea {
+  background: #222 !important;
+  color: #ff0 !important;
+  border-color: #ff0 !important;
+}
+.high-contrast .bg-white, .high-contrast .bg-yellow-100, .high-contrast .bg-gradient-to-br {
+  background: #111 !important;
+}
+.high-contrast .text-black, .high-contrast .text-yellow-700, .high-contrast .text-red-600, .high-contrast .text-yellow, .high-contrast .text-gold {
+  color: #ff0 !important;
+}
+.high-contrast .border-yellow-200, .high-contrast .border-yellow-300, .high-contrast .border-yellow-400 {
+  border-color: #ff0 !important;
+}
+.high-contrast .shadow-lg, .high-contrast .shadow-xl {
+  box-shadow: 0 0 0 2px #ff0 !important;
+}
