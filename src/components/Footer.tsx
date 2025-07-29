@@ -15,7 +15,7 @@ const Footer = () => {
       initial={{ opacity: 0, y: 60 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: [0.4,0,0.2,1] }}
-      className="bg-black text-gold-light"
+      className="bg-red-light text-black"
     >
       {/* Main Footer */}
       <div className="section-padding border-b border-gold-dark">
@@ -33,11 +33,11 @@ const Footer = () => {
                   <Shield className="w-6 h-6" />
                 </motion.div>
                 <div>
-                  <motion.h3 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.2 }} className="text-lg font-bold text-gold">Tomic Security</motion.h3>
-                  <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.4 }} className="text-xs text-gray">Trusted Protection</motion.p>
+                  <motion.h3 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.2 }} className="text-lg font-bold text-black">Tomic Security</motion.h3>
+                  <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.4 }} className="text-xs text-black">Trusted Protection</motion.p>
                 </div>
               </motion.div>
-              <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.6 }} className="text-gray-light mb-6 leading-relaxed">
+              <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.6 }} className="text-black mb-6 leading-relaxed">
                 Kenya's leading security services provider, delivering comprehensive protection 
                 solutions with cutting-edge technology and professional expertise since 2009.
               </motion.p>
@@ -60,21 +60,21 @@ const Footer = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }}
             >
-              <h4 className="text-lg font-semibold mb-6 text-orange">Recent Posts</h4>
+              <h4 className="text-lg font-semibold mb-6 text-black">Recent Posts</h4>
               <div className="space-y-4">
                 {recentPosts.map((post, index) => (
                   <div key={index} className="group cursor-pointer">
-                    <h5 className="text-sm font-medium text-gold group-hover:text-orange transition-colors mb-1">
+                    <h5 className="text-sm font-medium text-black group-hover:text-yellow-700 transition-colors mb-1">
                       {post}
                     </h5>
-                    <p className="text-xs text-gray">March 2024 • Admin</p>
+                    <p className="text-xs text-black">March 2024 • Admin</p>
                   </div>
                 ))}
               </div>
               
               <a 
                 href="#blog" 
-                className="inline-flex items-center space-x-1 text-orange hover:text-gold transition-colors text-sm mt-4"
+                className="inline-flex items-center space-x-1 text-black hover:text-yellow-700 transition-colors text-sm mt-4"
               >
                 <span>View all posts</span>
                 <ArrowRight className="w-4 h-4" />
@@ -83,8 +83,8 @@ const Footer = () => {
 
             {/* Newsletter */}
             <div>
-              <h4 className="text-lg font-semibold mb-6 text-gold">Stay Updated</h4>
-              <p className="text-gray-light text-sm mb-4">
+              <h4 className="text-lg font-semibold mb-6 text-black">Stay Updated</h4>
+              <p className="text-black text-sm mb-4">
                 Subscribe to our newsletter for security tips and company updates.
               </p>
               
@@ -96,14 +96,14 @@ const Footer = () => {
                 />
                 <button
                   type="submit"
-                  className="w-full bg-orange hover:bg-gold text-white font-medium py-2 px-4 rounded-lg transition-colors text-sm flex items-center justify-center space-x-2"
+                  className="w-full bg-orange hover:bg-gold text-black font-medium py-2 px-4 rounded-lg transition-colors text-sm flex items-center justify-center space-x-2"
                 >
                   <Mail className="w-4 h-4" />
                   <span>Subscribe</span>
                 </button>
               </form>
 
-              <p className="text-xs text-gray mt-3">
+              <p className="text-xs text-black mt-3">
                 We respect your privacy. Unsubscribe at any time.
               </p>
             </div>

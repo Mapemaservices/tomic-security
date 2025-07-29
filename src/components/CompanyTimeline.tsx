@@ -243,7 +243,7 @@ const CompanyTimeline = () => {
               <motion.button
                 whileHover={{ scale: 1.07, boxShadow: '0 0 16px #FFD700' }}
                 whileTap={{ scale: 0.97 }}
-                className="btn-primary bg-gradient-to-r from-orange via-gold to-red text-white font-bold py-3 px-8 rounded-xl shadow-lg text-lg"
+                className="btn-primary bg-gradient-to-r from-orange via-gold to-red text-black font-bold py-3 px-8 rounded-xl shadow-lg text-lg"
               >
                 Join Our Story
               </motion.button>

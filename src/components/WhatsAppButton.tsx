@@ -14,10 +14,20 @@ const WhatsAppButton = () => {
     <div className="fixed bottom-6 right-6 z-50">
       <button
         onClick={handleWhatsAppClick}
-        className="bg-orange hover:bg-gold text-white p-2 rounded-full shadow-float pulse-gentle transition-all duration-300 group border-2 border-gold"
+        className="bg-gradient-to-br from-green-400 via-green-600 to-green-800 hover:from-green-500 hover:to-green-700 text-white p-3 rounded-full shadow-2xl animate-float-glow transition-all duration-300 group border-2 border-green-400/60"
         title="Chat with us on WhatsApp"
+        style={{ boxShadow: '0 4px 32px 0 rgba(34,197,94,0.25), 0 1.5px 8px 0 rgba(34,197,94,0.18)' }}
       >
-        <MessageCircle className="w-6 h-6" />
+        <MessageCircle className="w-7 h-7" />
+      <style>{`
+        @keyframes float-glow {
+          0%, 100% { transform: translateY(0) scale(1); box-shadow: 0 4px 32px 0 rgba(34,197,94,0.25), 0 1.5px 8px 0 rgba(34,197,94,0.18); }
+          50% { transform: translateY(-10px) scale(1.08); box-shadow: 0 8px 48px 8px rgba(34,197,94,0.32), 0 2px 12px 0 rgba(34,197,94,0.22); }
+        }
+        .animate-float-glow {
+          animation: float-glow 2.8s ease-in-out infinite;
+        }
+      `}</style>
         <span className="absolute -top-2 -left-2 bg-red text-white text-xs rounded-full w-6 h-6 flex items-center justify-center pulse-gentle border-2 border-gold">
           1
         </span>

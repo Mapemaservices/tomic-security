@@ -77,9 +77,19 @@ const LiveChat = () => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-24 z-50 bg-primary text-primary-foreground p-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
+        className="fixed bottom-6 right-24 z-50 bg-gradient-to-br from-blue-400 via-blue-600 to-blue-800 text-white p-4 rounded-full shadow-2xl animate-float-glow transition-all duration-300 border-2 border-blue-400/60"
+        style={{ boxShadow: '0 4px 32px 0 rgba(59,130,246,0.25), 0 1.5px 8px 0 rgba(59,130,246,0.18)' }}
       >
         {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
+      <style>{`
+        @keyframes float-glow {
+          0%, 100% { transform: translateY(0) scale(1); box-shadow: 0 4px 32px 0 rgba(59,130,246,0.25), 0 1.5px 8px 0 rgba(59,130,246,0.18); }
+          50% { transform: translateY(-10px) scale(1.08); box-shadow: 0 8px 48px 8px rgba(59,130,246,0.32), 0 2px 12px 0 rgba(59,130,246,0.22); }
+        }
+        .animate-float-glow {
+          animation: float-glow 2.8s ease-in-out infinite;
+        }
+      `}</style>
       </motion.button>
 
       {/* Chat Window */}

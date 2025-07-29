@@ -1,26 +1,26 @@
 /* Reusable Tailwind component classes for main color palette */
 
 .header-bg {
-  @apply bg-gradient-to-r from-gold-light via-orange to-red-light p-2;
+  @apply bg-gradient-to-r from-yellow-light via-yellow to-red-light p-2;
 }
 .header-text {
   @apply text-black;
 }
 .header-accent {
-  @apply bg-gold text-black border-2 border-orange-dark p-1;
+  @apply bg-yellow text-black border-2 border-red-dark p-1;
 }
 .footer-bg {
-  @apply bg-black text-gold-light p-2;
+  @apply bg-black text-yellow-light p-2;
 }
 .footer-accent {
-  @apply bg-orange-dark text-white border-2 border-gold p-1;
+  @apply bg-red-dark text-white border-2 border-yellow p-1;
 }
 .btn-main {
-  @apply bg-orange hover:bg-gold text-white font-semibold rounded-lg shadow-lg transition-colors px-3 py-1;
+  @apply bg-red hover:bg-yellow text-white font-semibold rounded-lg shadow-lg transition-colors px-3 py-1;
 }
 .card-main {
-  @apply bg-gold text-black p-2;
+  @apply bg-yellow text-black p-2;
 }
 .text-accent {
-  @apply text-gold;
+  @apply text-yellow;
 }
