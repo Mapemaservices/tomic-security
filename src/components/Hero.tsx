@@ -53,7 +53,27 @@ const Hero = () => {
   ];
 
   return (
-    <section id="hero" className="section-padding relative overflow-hidden min-h-screen flex items-center justify-center pt-32 md:pt-40">
+    <section id="hero" className="section-padding relative overflow-hidden min-h-screen flex flex-col justify-start items-center pt-0 md:pt-0">
+      {/* Rotating marquee with company name, motto, and phone */}
+      <div className="w-full bg-black py-2 flex items-center justify-center overflow-hidden relative z-50">
+        <div className="marquee text-yellow-300 font-bold text-lg flex items-center gap-8">
+          <span>Tomic Security Services Limited</span>
+          <span className="text-white">|</span>
+          <span>"Your Trusted Security Solution Provider"</span>
+          <span className="text-white">|</span>
+          <span className="text-red-400">0724 630 001</span>
+        </div>
+        <style>{`
+          .marquee {
+            animation: marquee-rotate 12s linear infinite;
+            white-space: nowrap;
+          }
+          @keyframes marquee-rotate {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+          }
+        `}</style>
+      </div>
       {/* Parallax background */}
       <div
         className="absolute inset-0 w-full h-full z-0 pointer-events-none"

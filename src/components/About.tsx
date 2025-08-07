@@ -246,6 +246,42 @@ const About = () => {
       `}</style>
         </div>
       </div>
+      {/* Memberships & Affiliations */}
+      <div className="mt-16 mb-8 bg-gradient-to-r from-yellow-100 via-red-50 to-white rounded-3xl shadow-2xl p-10 border-4 border-yellow-200/60">
+        <h2 className="text-3xl font-extrabold text-yellow-700 mb-8 flex items-center gap-3 drop-shadow-lg">
+          <Award className="w-9 h-9 text-yellow-500 animate-pulse-glow" />
+          Memberships & Affiliations
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {/* KSIA */}
+          <div className="group flex flex-col items-center text-center bg-white/90 rounded-2xl shadow-xl border-2 border-yellow-200/60 p-6 transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-yellow-400 relative overflow-hidden">
+            <span className="absolute top-4 right-4 bg-yellow-400 text-white text-xs font-bold px-3 py-1 rounded-full shadow animate-pulse-glow">KSIA</span>
+            <div className="bg-yellow-200 p-5 rounded-full mb-4 shadow-lg animate-pulse-glow group-hover:scale-110 transition-transform">
+              <Shield className="w-10 h-10 text-red-600" />
+            </div>
+            <h3 className="font-bold text-lg text-yellow-700 mb-2">Kenya Security Industry Association</h3>
+            <p className="text-black/80 text-base">Proud member of KSIA, upholding the highest standards in Kenya’s security sector.</p>
+          </div>
+          {/* PROSAK */}
+          <div className="group flex flex-col items-center text-center bg-white/90 rounded-2xl shadow-xl border-2 border-red-200/60 p-6 transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-red-400 relative overflow-hidden">
+            <span className="absolute top-4 right-4 bg-red-400 text-white text-xs font-bold px-3 py-1 rounded-full shadow animate-pulse-glow">PROSAK</span>
+            <div className="bg-red-100 p-5 rounded-full mb-4 shadow-lg animate-pulse-glow group-hover:scale-110 transition-transform">
+              <Target className="w-10 h-10 text-yellow-600" />
+            </div>
+            <h3 className="font-bold text-lg text-red-600 mb-2">Protective Safety Association of Kenya</h3>
+            <p className="text-black/80 text-base">Active member of PROSAK, committed to professional safety and protection practices.</p>
+          </div>
+          {/* AGPO */}
+          <div className="group flex flex-col items-center text-center bg-white/90 rounded-2xl shadow-xl border-2 border-black/20 p-6 transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-black/40 relative overflow-hidden">
+            <span className="absolute top-4 right-4 bg-black text-white text-xs font-bold px-3 py-1 rounded-full shadow animate-pulse-glow">AGPO</span>
+            <div className="bg-yellow-100 p-5 rounded-full mb-4 shadow-lg animate-pulse-glow group-hover:scale-110 transition-transform">
+              <Eye className="w-10 h-10 text-black" />
+            </div>
+            <h3 className="font-bold text-lg text-black mb-2">AGPO Certified</h3>
+            <p className="text-black/80 text-base">Registered under the Access to Government Procurement Opportunities (AGPO) program.</p>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

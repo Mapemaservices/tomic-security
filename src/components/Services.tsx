@@ -33,6 +33,12 @@ const Services = () => {
       title: 'Biometric Access Control',
       description: 'State-of-the-art biometric systems including fingerprint, facial recognition, and card access control solutions.',
       features: ['Multiple biometrics', 'Integration ready', 'Audit trails']
+    },
+    {
+      icon: UserCheck,
+      title: 'Tomic Staff Outsourcing Service',
+      description: 'We provide qualified, reliable staff to meet client needs. Our outsourcing service ensures you get the right personnel for your business, vetted and ready to deliver.',
+      features: ['Qualified staff', 'Reliable service', 'Tailored to client needs']
     }
   ];
 
