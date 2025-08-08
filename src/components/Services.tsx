@@ -1,44 +1,38 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Home, Camera, Building2, Shield, UserCheck, Fingerprint } from 'lucide-react';
+import { Home, Camera, Building2, Shield, UserCheck } from 'lucide-react';
 
 const Services = () => {
   const services = [
     {
       icon: Home,
       title: 'Home Security',
-      description: 'Comprehensive residential security solutions including alarm systems, smart locks, and 24/7 monitoring for your peace of mind.',
-      features: ['Smart alarm systems', '24/7 monitoring', 'Mobile app control']
+      description: 'Basic residential security solutions for homes and apartments.',
+      features: ['Alarm response', 'Security guards', 'Patrol services']
     },
     {
       icon: Camera,
       title: 'CCTV Systems',
-      description: 'High-definition surveillance systems with remote monitoring capabilities and advanced analytics for maximum security coverage.',
-      features: ['HD cameras', 'Remote monitoring', 'Cloud storage']
+      description: 'Reliable CCTV installation and surveillance for homes and businesses.',
+      features: ['CCTV installation', 'Surveillance', 'Maintenance']
     },
     {
       icon: Building2,
       title: 'Factory Security',
       description: 'Industrial-grade security solutions designed for manufacturing facilities and warehouses with specialized equipment protection.',
-      features: ['Perimeter security', 'Access control', 'Asset protection']
+      features: ['Perimeter security', 'On-site guards', 'Asset protection']
     },
     {
       icon: UserCheck,
       title: 'Bodyguard Services',
       description: 'Professional personal protection services with trained security personnel for executives, VIPs, and high-risk individuals.',
-      features: ['Trained professionals', 'Risk assessment', 'Discrete protection']
+      features: ['Trained professionals', 'Escort services', 'VIP protection']
     },
     {
-      icon: Fingerprint,
-      title: 'Biometric Access Control',
-      description: 'State-of-the-art biometric systems including fingerprint, facial recognition, and card access control solutions.',
-      features: ['Multiple biometrics', 'Integration ready', 'Audit trails']
-    },
-    {
-      icon: UserCheck,
-      title: 'Tomic Staff Outsourcing Service',
-      description: 'We provide qualified, reliable staff to meet client needs. Our outsourcing service ensures you get the right personnel for your business, vetted and ready to deliver.',
-      features: ['Qualified staff', 'Reliable service', 'Tailored to client needs']
+      icon: Shield,
+      title: 'Event Security',
+      description: 'Reliable security for events, weddings, and gatherings.',
+      features: ['Trained guards', 'Crowd control', 'On-site supervision']
     }
   ];
 
@@ -92,7 +86,7 @@ const Services = () => {
             if (service.title.includes("CCTV")) cardColor = "bg-gradient-to-br from-black via-red-700 to-yellow-400 text-white group-hover:from-red-600 group-hover:to-yellow-300 group-hover:text-black";
             if (service.title.includes("Factory")) cardColor = "bg-gradient-to-br from-yellow-200 via-yellow-400 to-black text-black group-hover:from-black group-hover:to-yellow-200 group-hover:text-yellow-400";
             if (service.title.includes("Bodyguard")) cardColor = "bg-gradient-to-br from-white via-red-100 to-black text-black group-hover:from-red-200 group-hover:to-black group-hover:text-red-700";
-            if (service.title.includes("Biometric")) cardColor = "bg-gradient-to-br from-yellow-100 via-white to-black/80 text-yellow-700 group-hover:from-black group-hover:to-yellow-200 group-hover:text-black";
+            // Biometric service removed for Kenyan context
             return (
               <motion.div key={index} variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0 } }} whileHover={{ scale: 1.12, boxShadow: '0 8px 32px rgba(255,0,0,0.18), 0 2px 12px 0 rgba(255,221,51,0.18)', filter: 'brightness(1.08)' }} transition={{ duration: 0.6, ease: [0.4,0,0.2,1] }} className={`card-float group cursor-pointer border-2 border-yellow-200/40 rounded-2xl p-8 shadow-2xl backdrop-blur-xl ${cardColor} hover:shadow-yellow-300/40 hover:-translate-y-2 transition-all duration-500`}> 
                 <div className="p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 transition-all duration-300 shadow-xl bg-white/80 group-hover:bg-yellow-100">

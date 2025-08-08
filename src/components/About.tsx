@@ -84,7 +84,7 @@ const About = () => {
           </div>
 
           {/* Call for TOMIC Security Section */}
-          <div className="mt-8 mb-8 bg-gradient-to-r from-yellow-200 via-red-100 to-white rounded-2xl shadow-xl p-6 border-2 border-yellow-200/40 flex flex-col items-center">
+          <div className="bg-gradient-to-r from-yellow-200 via-red-100 to-white rounded-2xl shadow-xl p-6 border-2 border-yellow-200/40 flex flex-col items-center">
             <h2 className="text-2xl font-bold text-red-600 mb-2">Call for TOMIC Security</h2>
             <p className="text-lg text-black mb-2">For immediate assistance or inquiries, call us:</p>
             <div className="flex flex-col sm:flex-row gap-4 items-center">
@@ -92,7 +92,7 @@ const About = () => {
               <a href="tel:0739630001" className="text-xl font-bold text-yellow-700 bg-white rounded-lg px-4 py-2 shadow hover:bg-yellow-100 transition-colors">0739 630 001</a>
             </div>
           </div>
-          <div className="mt-12 bg-white/80 rounded-2xl shadow-xl p-8 border-2 border-yellow-200/40">
+          <div className="bg-white/80 rounded-2xl shadow-xl p-8 border-2 border-yellow-200/40" style={{marginTop: 0, marginBottom: 0, paddingTop: 24, paddingBottom: 24}}>
             <h2 className="text-2xl font-bold text-red-600 mb-4">Current Openings</h2>
             <p className="text-lg text-black mb-4">We are hiring! Apply for the following positions:</p>
             <ul className="list-disc pl-6 mb-6 text-black">
@@ -192,7 +192,7 @@ const About = () => {
           </div>
 
           {/* Mission & Vision */}
-          <div className="space-y-8">
+          <div className="space-y-8" style={{marginTop: 0, marginBottom: 0}}>
             <div className="bg-white/80 backdrop-blur-2xl border-2 border-yellow-200/40 rounded-2xl p-10 shadow-2xl relative overflow-hidden">
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-yellow-200 via-red-200 to-white opacity-30 rounded-full blur-2xl z-0"></div>
               <div className="flex items-center space-x-4 mb-4 relative z-10">

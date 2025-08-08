@@ -56,16 +56,16 @@ const TestimonialsCarousel = () => {
           ×
         </button>
         <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-yellow-300 scrollbar-track-white w-full">
-          <div className="flex space-x-6 md:space-x-8 py-2" style={{ minWidth: '320px' }}>
+          <div className="flex space-x-3 md:space-x-4 py-1" style={{ minWidth: '220px' }}>
             {reviews.map((r, idx) => (
               <div
                 key={idx}
-                className="min-w-[260px] max-w-xs md:min-w-[320px] md:max-w-sm bg-white rounded-2xl shadow-xl p-6 md:p-8 border-2 border-yellow-200/40 flex flex-col items-center mx-2"
+                className="min-w-[180px] max-w-[210px] md:min-w-[220px] md:max-w-[250px] flex flex-col items-start mx-1 bg-transparent p-0"
                 style={{ flex: '0 0 auto' }}
               >
-                <div className="text-base md:text-lg text-black mb-4 italic">“{r.review}”</div>
-                <div className="font-bold text-yellow-700 text-lg md:text-xl mb-1">{r.name}</div>
-                <div className="text-xs md:text-sm text-gray-500">{r.company}</div>
+                <div className="text-sm md:text-base text-black mb-1 italic">“{r.review}”</div>
+                <div className="font-semibold text-yellow-700 text-xs md:text-sm mb-0">{r.name}</div>
+                <div className="text-[10px] md:text-xs text-gray-500">{r.company}</div>
               </div>
             ))}
           </div>

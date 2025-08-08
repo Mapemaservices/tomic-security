@@ -7,7 +7,7 @@ const CompanyTimeline = () => {
     {
       year: '2008',
       title: 'Company Founded',
-      description: 'Tomic Security was established with a vision to provide premier security services in Kenya.',
+      description: 'Tomic Security was established with a vision to provide reliable security services in Kenya.',
       icon: Calendar,
       stats: { clients: '5', guards: '15', projects: '10' },
       achievements: ['First security contract', 'Initial team formation']
@@ -15,42 +15,42 @@ const CompanyTimeline = () => {
     {
       year: '2012',
       title: 'First Major Expansion',
-      description: 'Expanded operations beyond Nairobi, establishing regional offices in Mombasa and Kisumu.',
+      description: 'Expanded operations beyond Nairobi, opening offices in Mombasa and Kisumu.',
       icon: MapPin,
       stats: { clients: '150', guards: '300', projects: '200' },
-      achievements: ['Regional expansion', 'ISO certification', 'Advanced training program']
+      achievements: ['Regional expansion', 'Staff training program', 'Community partnerships']
     },
     {
       year: '2016',
-      title: 'Technology Integration',
-      description: 'Introduced cutting-edge surveillance technology and launched our cybersecurity division.',
+      title: 'Service Diversification',
+      description: 'Introduced new services including event security and patrol response for estates and businesses.',
       icon: Shield,
       stats: { clients: '500', guards: '750', projects: '800' },
-      achievements: ['Cybersecurity division launch', 'Smart surveillance systems', 'Mobile app development']
+      achievements: ['Event security launch', 'Patrol response', 'Staff welfare initiatives']
     },
     {
       year: '2019',
       title: 'Industry Recognition',
-      description: 'Received national security excellence award and achieved government security clearance.',
+      description: 'Received local security excellence award and secured key government and private contracts.',
       icon: Award,
       stats: { clients: '1200', guards: '1000', projects: '1500' },
-      achievements: ['National security award', 'Government contracts', 'International partnerships']
+      achievements: ['Security award', 'Government contracts', 'Trusted by corporates']
     },
     {
       year: '2022',
-      title: 'Digital Transformation',
-      description: 'Launched AI-powered monitoring systems and real-time incident response platform.',
+      title: 'Community Impact',
+      description: 'Launched community safety programs and expanded to more counties across Kenya.',
       icon: TrendingUp,
       stats: { clients: '2000', guards: '1200', projects: '2500' },
-      achievements: ['AI integration', 'Real-time platform', 'Executive protection services']
+      achievements: ['Community safety', 'County expansion', 'Women in security']
     },
     {
       year: '2024',
       title: 'Current Leadership',
-      description: 'Today, we are Kenya\'s most trusted security provider with industry-leading technology.',
+      description: 'Today, we are among Kenya\'s most trusted security providers, known for reliability and professionalism.',
       icon: Users,
       stats: { clients: '2700', guards: '1200', projects: '2800' },
-      achievements: ['Market leadership', 'Advanced biometrics', 'Smart city partnerships']
+      achievements: ['Market leadership', 'Staff development', 'Client satisfaction']
     }
   ];
 
